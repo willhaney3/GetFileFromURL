@@ -16,11 +16,11 @@ namespace GetFileFromURL
 
     private async void btnExecute_Click(object sender, EventArgs e)
     {
-      //show witing cursor
+      //show waiting cursor
       Application.UseWaitCursor = true;
       try
       {
-        // get file from url
+        // get file from url and save to file
         await Task.Run(() => GetFileFormURLAsynch(txtURL.Text, txtPath.Text));
         // display message        
         MessageBox.Show("File has been downloaded to folder.");
@@ -50,6 +50,7 @@ namespace GetFileFromURL
     #region Methods
     private static void GetFileFormURLAsynch(string URL, string Path)
     {
+      // download file
       BO.DownloadFile(URL, Path);
     }
 
