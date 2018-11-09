@@ -26,7 +26,7 @@ namespace GetFileFromURL
     {
       // results
       var results = string.Empty;
-      // folder browser dialog
+      // get folder browser dialog and dispose of when done
       using (var folderBrowserDialog = new FolderBrowserDialog())
       {
       // opend dialog and check for ok click
@@ -42,6 +42,7 @@ namespace GetFileFromURL
 
     public static void Exit()
     {
+      // exit application
       Application.Exit();
     }
     
