@@ -26,13 +26,17 @@ namespace GetFileFromURL
     {
       // results
       var results = string.Empty;
+      // folder browser dialog
       using (var folderBrowserDialog = new FolderBrowserDialog())
       {
+      // opend dialog and check for ok click
         if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
         {
+          // assign results to folder selected
           results = folderBrowserDialog.SelectedPath;
         }
       }
+      //return results
       return results;
     }
 
