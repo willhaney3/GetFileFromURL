@@ -28,6 +28,7 @@ namespace GetFileFromURL
       }
       catch (Exception exception)
       {
+        // display error message
         MessageBox.Show(exception.Message);
       }
       // show default cursor
